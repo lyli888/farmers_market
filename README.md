@@ -4,7 +4,7 @@
 
 ## Purpose II: Build interactive map of farmers' market locations using Leaflet/Javascript. 
 
-## Purpose III: Scrape & compare/contrast with data on locations of fast food restaurants at https://www.ers.usda.gov/data-products/food-environment-atlas/go-to-the-atlas/
+## Purpose III: Scrape & compare/contrast with data on locations of fast food restaurants at https://www.ers.usda.gov/data-products/food-environment-atlas/go-to-the-atlas/ (web-scrape image).
 
 Links:
 
