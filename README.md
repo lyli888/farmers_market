@@ -14,4 +14,4 @@ Sample USDS Mapping of farmers' markets: https://search.ams.usda.gov/farmersmark
 
 API Page for farmers' markets: https://search.ams.usda.gov/farmersmarkets/v1/svcdesc.html
 
-
+Documentation of df.to_json() https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_json.html
