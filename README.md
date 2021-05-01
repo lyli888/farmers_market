@@ -1,6 +1,6 @@
 # Visualizing Farmers' Market Data
 
-## Purpose I: Write script to clean, analyze, & transform farmers' market csv data into MongoDB compatible JSON files using Python in Pandas & Jupyter Notebook.
+## Purpose I: Write script to clean, analyze, & transform farmers' market csv data into MongoDB compatible JSON/GeoJSON files using Python in Pandas & Jupyter Notebook.
 
 ## Purpose II: Build interactive map of farmers' market locations using Leaflet/Javascript. 
 
