@@ -4,6 +4,9 @@ var myMap;
 //Globally Accessible Legend variable
 var legend;
 
+//Globally accessible quakeMarkers array
+var marketMarkers = [];
+
 //Globally accessible path to CSV
 var csvpath = "../data/farmers_market_cleaned.csv";
 
@@ -26,13 +29,12 @@ d3.csv(csvpath).then(function(fmdata) {
   });
 });
 
-d3.geoJSON(geojsonpath).then(createMarkers);
+d3.geoJSON(geojsonpath).then(createMarkers());
 
-//Globally accessible quakeMarkers array
-var marketMarkers = [];
+
 
 //Creates & places markers w/ earthquake info, calls createMap
-function createMarkers(response) {
+function createMarkers() {
 
     // Pull data from response
     for (var i = 0; i < response.features.length; i++) {
@@ -104,33 +106,7 @@ function createMap(markets) {
 
 }
 
-function addCircles(quakeCircles){
-  //Add Circles 
-  quakeCircles.addTo(myMap);
-  createLegend();
-}
 
-//Circle Marker Radius Function
-function quakeRadius(mag) {
-  return ((mag+1) ** 2) * 30000;
-}
-
-//Circle Marker Color Function
-function quakeColor(depth) {
-  if (depth <= 1) {
-      return "#008000";
-  } else if (depth <= 5 && depth > 1) {
-      return "#FF0000";
-  } else if (depth <= 10 && depth > 5) {
-      return "#FFA500";
-  } else if (depth <= 50 && depth > 10) {
-      return "#FFFF00";
-  } else if (depth <= 150 && depth > 50) {
-      return "#008000";
-  } else {
-      return "#000000";
-  };
-}
 
 //Legend
 function createLegend(){
