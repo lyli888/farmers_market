@@ -14,10 +14,15 @@ var geojsonpath = "../data/GeoObs2.geojson";
 d3.csv(csvpath).then(function(fmdata) {
   // Fill in column names on left, a + on the right for numbers
   fmdata.forEach(function(d) {
-    d.state = d.state;
-    d.abbr = d.abbr;
-    d.poverty = +d.poverty;
-    d.healthcare = +d.healthcare;
+    d.y = +d.y;
+    d.x = +d.x;
+    d.MarketName = d.name;
+    d.WIC = d.wic;
+    d.Organic = d.organic;
+    d.Vegetable = d.vegetable;
+    d.Fruits = d.fruit;
+    d.Meat = d.meat;
+    d.Grains = d.grain;
   });
 });
 
