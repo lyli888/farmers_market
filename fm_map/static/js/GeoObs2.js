@@ -1,4 +1,4 @@
-var geojson = {
+{
     "type": "FeatureCollection",
     "features": [
         {
@@ -6,9 +6,27 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "-72.140337",
-                    "44.411036"
-                    
+                    "y",
+                    "x"
+                ]
+            },
+            "properties": {
+                "MarketName": "MarketName",
+                "WIC": "WIC",
+                "Organic": "Organic",
+                "Vegetables": "Vegetables",
+                "Fruits": "Fruits",
+                "Meat": "Meat",
+                "Grains": "Grains"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "44.411036",
+                    "-72.140337"
                 ]
             },
             "properties": {
