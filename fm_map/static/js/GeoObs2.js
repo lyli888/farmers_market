@@ -4315,8 +4315,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "37.376728",
-                    "-77.504419"
+                    "-77.504419",
+                    "37.376728"
+                    
                 ]
             },
             "properties": {
@@ -4334,8 +4335,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "40.06776",
-                    "-75.196931"
+                    "-75.196931",
+                    "40.06776"
+                    
                 ]
             },
             "properties": {
@@ -4353,8 +4355,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "39.730823",
-                    "-121.838323"
+                    "-121.838323",
+                    "39.730823"
+                    
                 ]
             },
             "properties": {
@@ -4372,8 +4375,8 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "39.758425",
-                    "-121.848452"
+                    "-121.848452",
+                    "39.758425"
                 ]
             },
             "properties": {
@@ -4391,8 +4394,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "39.77368",
-                    "-121.595446"
+                    "-121.595446",
+                    "39.77368"
+                    
                 ]
             },
             "properties": {
@@ -4410,8 +4414,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "36.80295",
-                    "-81.676633"
+                    "-81.676633",
+                    "36.80295"
+                    
                 ]
             },
             "properties": {
@@ -4429,8 +4434,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "35.570981",
-                    "-80.5778246"
+                    "-80.5778246",
+                    "35.570981"
+                    
                 ]
             },
             "properties": {
@@ -4448,8 +4454,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
+                    "-91.389337",
                     "44.934888",
-                    "-91.389337"
+                    
                 ]
             },
             "properties": {
