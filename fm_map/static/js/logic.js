@@ -7,30 +7,10 @@ var legend;
 //Globally accessible quakeMarkers array
 var marketMarkers = [];
 
-//Globally accessible path to CSV
-var csvpath = "../data/farmers_market_cleaned.csv";
-
 //Globally accessible path to geojson data
 var geojsonpath = "../data/GeoObs2.geojson";
 
-
-d3.csv(csvpath).then(function(fmdata) {
-  // Fill in column names on left, a + on the right for numbers
-  fmdata.forEach(function(d) {
-    d.y = +d.y;
-    d.x = +d.x;
-    d.MarketName = d.name;
-    d.WIC = d.wic;
-    d.Organic = d.organic;
-    d.Vegetable = d.vegetable;
-    d.Fruits = d.fruit;
-    d.Meat = d.meat;
-    d.Grains = d.grain;
-  });
-});
-
 d3.geoJSON(geojsonpath).then(createMarkers());
-
 
 
 //Creates & places markers w/ earthquake info, calls createMap
