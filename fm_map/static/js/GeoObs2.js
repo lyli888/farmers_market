@@ -6,8 +6,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "44.411036",
-                    "-72.140337"
+                    "-72.140337",
+                    "44.411036"
+                    
                 ]
             },
             "properties": {
