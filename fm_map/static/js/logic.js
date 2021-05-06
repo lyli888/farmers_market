@@ -16,7 +16,7 @@ var marketMarkers = [];
 
 
 // Creating map object
-var myMap = L.map("map", {
+var myMap = L.map("map-id", {
   center: [40.7128, -74.0059],
   zoom: 11
 });
@@ -41,5 +41,5 @@ var mapStyle = {
   fillOpacity: 0.5,
   weight: 1.5
 };
-
+console.log(geojson);
 L.geoJson(geojson).addTo(myMap);
