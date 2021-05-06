@@ -1,20 +1,30 @@
-//Globally accessible Link to GeoJSON data
-var geolink = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
-
 //Glonally accessible map variable
 var myMap;
-
-//Globally accessible quakeMarkers array
-var quakeMarkers = [];
-
-//Globally accessible quakeCircles array
-var quakeCircles = [];
 
 //Globally Accessible Legend variable
 var legend;
 
-// Perform an API call to the USGS API to get earthquake information. Call createMarkers 
-d3.json(geolink).then(createMarkers);
+//Globally accessible path to CSV
+var csvpath = "../data/farmers_market_cleaned.csv";
+
+//Globally accessible path to geojson data
+var geojsonpath = "../data/GeoObs2.geojson";
+
+
+d3.csv(csvpath).then(function(fmdata) {
+  // Fill in column names on left, a + on the right for numbers
+  fmdata.forEach(function(d) {
+    d.state = d.state;
+    d.abbr = d.abbr;
+    d.poverty = +d.poverty;
+    d.healthcare = +d.healthcare;
+  });
+});
+
+d3.geoJSON(geojsonpath).then(createMarkers);
+
+//Globally accessible quakeMarkers array
+var marketMarkers = [];
 
 //Creates & places markers w/ earthquake info, calls createMap
 function createMarkers(response) {
@@ -30,11 +40,11 @@ function createMarkers(response) {
 		  console.log(location);
   
       //Marker With Popup
-      var quakeMarker = L.marker(location)
+      var marketMarker = L.marker(location)
       .bindPopup("<h3>" + response.features[i].properties.place + "<h3><h3>Magnitude: " + response.features[i].properties.mag + "</h3>"+ "<h3><h3>Depth: " + response.features[i].geometry.coordinates[2] + "</h3>"+ "<h3><h3>Date: " + response.features[i].properties.time+ "</h3>");
   
       //Markers ==> Array
-      quakeMarkers.push(quakeMarker);
+      marketMarkers.push(marketMarker);
 
       //
       var quakeCircle = L.circle(location, {
@@ -54,7 +64,7 @@ function createMarkers(response) {
 } 
 
 //Create Map function
-function createMap(earthquakes) {
+function createMap(markets) {
 
   // Create the tile layer that will be the background of our map
   var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -71,7 +81,7 @@ function createMap(earthquakes) {
 
   // Create an overlayMaps object to hold the earthquakes layer
   var overlayMaps = {
-    "Earthquakes": earthquakes,
+    "Farmers' Markers": markets,
   };
 
   // Create the map object with options
@@ -79,7 +89,7 @@ function createMap(earthquakes) {
     center: [40.73, -74.0059],
     zoom: 12,
     minZoom: 0,
-    layers: [lightmap, earthquakes]
+    layers: [lightmap, markets]
   });
 
   // Create a layer control, pass in the baseMaps, overlayMaps. Add the layer control to the map
