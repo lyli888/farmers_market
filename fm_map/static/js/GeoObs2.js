@@ -8467,8 +8467,9 @@ var geojson = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    "37.087883",
-                    "-94.502691"
+                    "-94.502691",
+                    "37.087883"
+                    
                 ]
             },
             "properties": {
